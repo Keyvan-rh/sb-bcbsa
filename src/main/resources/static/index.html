@@ -24,7 +24,7 @@
 
         <form class="form-inline">
             <div class="form-group">
-                <label for="name">Name your bcbsa demo:</label>
+                <label for="name">Name your demo:</label>
                 <input type="text" class="form-control" id="name" placeholder="World">
             </div>
             <button id="invoke" type="submit" class="btn btn-success">Invoke</button>
@@ -43,7 +43,7 @@
 <script>
   $(document).ready(function () {
     $("#invoke").click(function (e) {
-      var n = $("#name").val() || "World of bcbsa";
+      var n = $("#name").val() || " friends.";
       $.getJSON("/api/greeting?name=" + n, function (res) {
         $("#greeting-result").text(JSON.stringify(res));
       });
